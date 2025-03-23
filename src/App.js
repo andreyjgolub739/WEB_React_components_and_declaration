@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserName />
+      <hr></hr>
+      <CourseName />
+      <ListTopicsCourse />
     </div>
   );
+}
+
+// Завдання 1. Створити та використати компонент для відображення власного ім'я.
+function UserName() {
+  return <h1>Моє ім'я: Андрій!</h1>;
+}
+
+function CourseName() {
+  return <h2>Назва курсу: ПЗ-21</h2>;
+}
+
+function ListTopicsCourse() {
+  return <ul><h3>Список тем курсу</h3>
+    <li>OOP</li>
+    <li>IoT Platform</li>
+    <li>English</li>
+    <li>WEB programming</li>
+  </ul>;
 }
 
 export default App;
